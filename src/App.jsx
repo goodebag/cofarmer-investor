@@ -11,6 +11,7 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import AboutUsPage from './pages/AboutUsPage';
 import InvestorDashboard from './pages/InvestorDashboard';
 
 function ScrollToTop() {
@@ -116,6 +117,7 @@ export default function App() {
                     <Route path="/signup" element={<SignUpPage onSignUp={handleSignUp} currentUser={currentUser} />} />
                     <Route path="/forgot-password" element={<ForgotPasswordPage />} />
                     <Route path="/reset-password" element={<ResetPasswordPage />} />
+                    <Route path="/about-us" element={<AboutUsPage />} />
                     <Route path="/dashboard" element={
                         currentUser ? <InvestorDashboard user={currentUser} token={token} /> : <Navigate to="/login" replace />
                     } />

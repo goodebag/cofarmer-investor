@@ -33,6 +33,7 @@ const Header = ({ user, onLogout, showMobileMenu, setShowMobileMenu }) => {
                     ) : (
                         <>
                             <a href="https://cofarmer.africa" className="text-white hover:text-yellow-300 transition-colors duration-300 font-medium tracking-wide py-2">Farmer Portal</a>
+                            <NavLink to="/about-us">About Us</NavLink>
                             <Link to="/login" className="flex items-center space-x-2 text-white hover:text-yellow-300">
                                 <LogIn size={18} />
                                 <span>Sign In</span>
@@ -61,6 +62,7 @@ const Header = ({ user, onLogout, showMobileMenu, setShowMobileMenu }) => {
                         ) : (
                             <>
                                 <a href="https://cofarmer.africa" className="text-white hover:text-yellow-300 font-medium tracking-wide py-2">Farmer Portal</a>
+                                <NavLink to="/about-us" onClick={() => setShowMobileMenu(false)}>About Us</NavLink>
                                 <NavLink to="/login" onClick={() => setShowMobileMenu(false)}>Sign In</NavLink>
                                 <NavLink to="/signup" onClick={() => setShowMobileMenu(false)}>Sign Up</NavLink>
                             </>
